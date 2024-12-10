@@ -1,9 +1,14 @@
 [package]
 name = "Cetus-AMM"
 version = "0.0.1"
+# edition = "2024.alpha" # 
+edition = "legacy"
+
 
 [dependencies]
-Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework", rev = "devnet" }
+Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "framework/testnet" }
+
+
 
 [addresses]
 cetus_amm = "0xfe111eb2500241698252189ba4a6a480ab02315b"

@@ -459,6 +459,7 @@ module cetus_amm::amm_swap {
         coin_liquidity
     }
 
+    #[allow(deprecated_usage)]
     fun mint<CoinTypeA, CoinTypeB>(
         pool: &mut Pool<CoinTypeA, CoinTypeB>,
         balance_a: Balance<CoinTypeA>,

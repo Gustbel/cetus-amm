@@ -6,10 +6,12 @@ edition = "legacy"
 
 
 [dependencies]
-Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "framework/testnet" }
+# Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "framework/testnet" }
+Iota = { git = "https://github.com/iotaledger/iota.git", subdir = "crates/iota-framework/packages/iota-framework", rev = "testnet" }
 
 
 
 [addresses]
-cetus_amm = "0xfe111eb2500241698252189ba4a6a480ab02315b"
-sui = "0x2"
+cetus_amm = "0x0"
+# sui = "0x2"
+ iota = "0x2"

@@ -2,10 +2,10 @@ module cetus_amm::amm_config {
     friend cetus_amm::amm_router;
     friend cetus_amm::amm_swap;
 
-    use sui::object::{Self, UID, ID};
-    use sui::tx_context::{Self, TxContext};
-    use sui::event;
-    use sui::transfer;
+    use iota::object::{Self, UID, ID};
+    use iota::tx_context::{Self, TxContext};
+    use iota::event;
+    use iota::transfer;
 
     const EPoolPause: u64 = 1;
 

@@ -1,15 +1,16 @@
 module cetus_amm::amm_swap {
     friend cetus_amm::amm_router;
-    use sui::object::{Self, UID, ID};
-    use sui::coin::{Self, Coin};
-    use sui::balance::{Self, Supply, Balance};
-    use sui::transfer;
-    use sui::event;
-    use sui::math;
-    use sui::tx_context::{Self, TxContext};
+    use iota::object::{Self, UID, ID};
+    use iota::coin::{Self, Coin};
+    use iota::balance::{Self, Supply, Balance};
+    use iota::transfer;
+    use iota::event;
+    use std::u64;
+    use std::u128;
+    use iota::tx_context::{Self, TxContext};
     use cetus_amm::amm_config::{new_global_pause_status_and_shared};
     use cetus_amm::amm_math;
-    use sui::pay;
+    use iota::pay;
 
     const MINIMUM_LIQUIDITY: u64 = 10;
 
@@ -474,11 +475,11 @@ module cetus_amm::amm_swap {
         let total_supply = balance::supply_value(&pool.lp_supply);
         let liquidity: u64;
         if (total_supply == 0) {
-            liquidity = (math::sqrt_u128((amount_a as u128) * (amonut_b as u128)) as u64) - MINIMUM_LIQUIDITY;
+            liquidity = (u128::sqrt((amount_a as u128) * (amonut_b as u128)) as u64) - MINIMUM_LIQUIDITY;
             let balance_lp_locked = balance::increase_supply(&mut pool.lp_supply, MINIMUM_LIQUIDITY);
             balance::join(&mut pool.lp_locked, balance_lp_locked);
         } else {
-            liquidity = math::min(
+            liquidity = u64::min(
                 amm_math::safe_mul_div_u64(amount_a, total_supply, reserve_a),
                 amm_math::safe_mul_div_u64(amonut_b, total_supply, reserve_b));
         };

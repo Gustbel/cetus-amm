@@ -2,11 +2,11 @@ module cetus_amm::amm_router {
     use cetus_amm::amm_swap::{Self, Pool, PoolLiquidityCoin, AdminCap, FlashSwapReceipt};
     use cetus_amm::amm_config::{Self, GlobalPauseStatus};
     use cetus_amm::amm_utils;
-    use sui::coin::{Self,Coin};
-    use sui::tx_context::{Self, TxContext};
-    use sui::balance::{Self, Balance};
-    use sui::transfer;
-    use sui::pay;
+    use iota::coin::{Self,Coin};
+    use iota::tx_context::{Self, TxContext};
+    use iota::balance::{Self, Balance};
+    use iota::transfer;
+    use iota::pay;
 
     const ENotEnough: u64 = 1;
     const ESwapOutLessthanExpected: u64 = 2;

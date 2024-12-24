@@ -2,8 +2,8 @@ module cetus_amm::amm_script {
     use cetus_amm::amm_swap::{Pool,PoolLiquidityCoin, AdminCap};
     use cetus_amm::amm_config::{GlobalPauseStatus};
     use cetus_amm::amm_router;
-    use sui::coin::{Coin};
-    use sui::tx_context::{TxContext};
+    use iota::coin::{Coin};
+    use iota::tx_context::{TxContext};
 
     public entry fun init_pool<CoinTypeA, CoinTypeB>(
         admin_cap: &AdminCap,

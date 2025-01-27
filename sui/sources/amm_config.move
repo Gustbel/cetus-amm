@@ -1,6 +1,6 @@
-module cetus_amm::amm_config {
-    friend cetus_amm::amm_router;
-    friend cetus_amm::amm_swap;
+module nakama_amm::amm_config {
+    friend nakama_amm::amm_router;
+    friend nakama_amm::amm_swap;
 
     use iota::object::{Self, UID, ID};
     use iota::tx_context::{Self, TxContext};

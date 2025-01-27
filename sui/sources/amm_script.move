@@ -1,7 +1,7 @@
-module cetus_amm::amm_script {
-    use cetus_amm::amm_swap::{Pool,PoolLiquidityCoin, AdminCap};
-    use cetus_amm::amm_config::{GlobalPauseStatus};
-    use cetus_amm::amm_router;
+module nakama_amm::amm_script {
+    use nakama_amm::amm_swap::{Pool,PoolLiquidityCoin, AdminCap};
+    use nakama_amm::amm_config::{GlobalPauseStatus};
+    use nakama_amm::amm_router;
     use iota::coin::{Coin};
     use iota::tx_context::{TxContext};
 

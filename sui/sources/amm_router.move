@@ -1,7 +1,7 @@
-module cetus_amm::amm_router {
-    use cetus_amm::amm_swap::{Self, Pool, PoolLiquidityCoin, AdminCap, FlashSwapReceipt};
-    use cetus_amm::amm_config::{Self, GlobalPauseStatus};
-    use cetus_amm::amm_utils;
+module nakama_amm::amm_router {
+    use nakama_amm::amm_swap::{Self, Pool, PoolLiquidityCoin, AdminCap, FlashSwapReceipt};
+    use nakama_amm::amm_config::{Self, GlobalPauseStatus};
+    use nakama_amm::amm_utils;
     use iota::coin::{Self,Coin};
     use iota::tx_context::{Self, TxContext};
     use iota::balance::{Self, Balance};

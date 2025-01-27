@@ -1,5 +1,5 @@
-module cetus_amm::amm_swap {
-    friend cetus_amm::amm_router;
+module nakama_amm::amm_swap {
+    friend nakama_amm::amm_router;
     use iota::object::{Self, UID, ID};
     use iota::coin::{Self, Coin};
     use iota::balance::{Self, Supply, Balance};
@@ -8,8 +8,8 @@ module cetus_amm::amm_swap {
     use std::u64;
     use std::u128;
     use iota::tx_context::{Self, TxContext};
-    use cetus_amm::amm_config::{new_global_pause_status_and_shared};
-    use cetus_amm::amm_math;
+    use nakama_amm::amm_config::{new_global_pause_status_and_shared};
+    use nakama_amm::amm_math;
     use iota::pay;
 
     const MINIMUM_LIQUIDITY: u64 = 10;

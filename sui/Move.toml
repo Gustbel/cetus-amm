@@ -1,7 +1,6 @@
 [package]
 name = "Cetus-AMM"
 version = "0.0.1"
-# edition = "2024.alpha" # 
 edition = "legacy"
 
 
@@ -10,8 +9,17 @@ edition = "legacy"
 Iota = { git = "https://github.com/iotaledger/iota.git", subdir = "crates/iota-framework/packages/iota-framework", rev = "testnet" }
 
 
-
 [addresses]
-cetus_amm = "0x0"
-# sui = "0x2"
- iota = "0x2"
+nakama_amm = "0x0"
+iota = "0x2"
+
+
+# staking admin
+treasury_admin = "0x989355841c92853ce05e057bdde08bdcb880ea85fc0dfe5428691d2b355735a7"
+stake_emergency_admin = "0x989355841c92853ce05e057bdde08bdcb880ea85fc0dfe5428691d2b355735a7"
+
+# staking test addresses.
+treasury = "0x13"
+emergency = "0x14"
+alice = "0x15"
+bob = "0x16"

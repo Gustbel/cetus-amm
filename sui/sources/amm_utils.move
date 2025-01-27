@@ -1,6 +1,6 @@
-module cetus_amm::amm_utils {
+module nakama_amm::amm_utils {
     use std::debug;
-    use cetus_amm::amm_math;
+    use nakama_amm::amm_math;
 
     const EParamInvalid: u64 = 1;
     public fun get_amount_in(

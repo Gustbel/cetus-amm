@@ -2,6 +2,7 @@
 name = "Nakama-AMM"
 version = "0.0.2"
 edition = "legacy"
+published-at = "0x28974728bd73ce1c6bf66c6ecb750b988c61fa5b01e491754562cf1bcf8714e9"
 
 
 [dependencies]
